@@ -17,6 +17,9 @@ kind: Deployment
 metadata:
   name: gke-test
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   replicas: 1
   strategy:
     rollingUpdate:
