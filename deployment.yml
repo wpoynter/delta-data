@@ -12,14 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: apps/v1
+apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: gke-test
 spec:
-  selector:
-    matchLabels:
-      app: nginx
   replicas: 1
   strategy:
     rollingUpdate:
